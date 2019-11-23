@@ -1,0 +1,26 @@
+Write a in-order, pre-order and post-order traversal
+
+function inOrderTraverse(node,array){
+  if(node === null) return 
+  inOrderTraverse(node.left,array)
+  array.push(node.value)
+  inOrderTraverse(node.right, array)
+  return array
+}
+
+
+function preOrderTraverse(node,array){
+  if(node === null) return
+  array.push(node.value)
+  preOrderTraverse(node.left,array)
+  preOrderTraverse(node.right,array)
+  return array
+}
+
+function postOrderTraverse(node,array){
+  if(node === null) return 
+  postOrderTraverse(node.left,array)
+  postOrderTraverse(node.right,array)
+  array.push(node.value)
+  return array
+}
